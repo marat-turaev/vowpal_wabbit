@@ -6,7 +6,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>cs_unittest</RootNamespace>
     <AssemblyName>cs_unittest</AssemblyName>
-    <TargetFrameworks>netcoreapp3.1;net452</TargetFrameworks>
+    <TargetFrameworks Condition="'$(VisualStudioVersion)' == '16.0'">netcoreapp3.1;net452</TargetFrameworks>
+    <TargetFramework Condition="'$(VisualStudioVersion)' == '15.0'">net452</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
     <SignAssembly>true</SignAssembly>

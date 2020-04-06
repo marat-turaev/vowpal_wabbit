@@ -5,7 +5,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VW</RootNamespace>
     <AssemblyName>VowpalWabbit.Common</AssemblyName>
-    <TargetFrameworks>netcoreapp3.1;net452</TargetFrameworks>
+    <TargetFrameworks Condition="'$(VisualStudioVersion)' == '16.0'">netcoreapp3.1;net452</TargetFrameworks>
+    <TargetFramework Condition="'$(VisualStudioVersion)' == '15.0'">net452</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
     <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>

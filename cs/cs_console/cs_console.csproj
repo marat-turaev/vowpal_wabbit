@@ -6,7 +6,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VowpalWabbit.Console</RootNamespace>
     <AssemblyName>cs_console</AssemblyName>
-    <TargetFrameworks>netcoreapp3.1;net452</TargetFrameworks>
+    <TargetFrameworks Condition="'$(VisualStudioVersion)' == '16.0'">netcoreapp3.1;net452</TargetFrameworks>
+    <TargetFramework Condition="'$(VisualStudioVersion)' == '15.0'">net452</TargetFramework>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <FileAlignment>512</FileAlignment>
     <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
